@@ -188,4 +188,26 @@ body {
   background-color:white;
   border-radius:3px;
   border:1px solid rgb(230, 230, 230);
+  padding:10px;
+  box-sizing:border-box;
+}
+
+#quest_creator {
+  display:flex;
+}
+
+#quest_creator_avatar {
+  height:30px;
+  width:30px;
+  background-image:url('../assets/avatar_example.jpg');
+  background-size:cover;
+  background-position:center;
+  border-radius:100%;
+}
+
+#quest_creator_input {
+  height:30px;
+  margin:0px 10px;
+  box-sizing:border-box;
+  width:calc(100% - 70px);
 }
