@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Heyquest</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div id="body_wrapper">
+    <img src="assets/auth_logo_main.png" id="auth_logo_main">
+    <div id="form_wrapper">
+        <div id="auth_register_1">
+            <h1 id="auth_title">Join our guild</h1>
+            <p id="auth_subtitle">Sit next to the fire and tell us your story.</p>
+            <input id="auth_name" type="text" placeholder="Name" class="auth_input">
+            <input id="auth_email" type="text" placeholder="Email" class="auth_input">
+            <input id="auth_password" type="password" placeholder="Password" class="auth_input">
+            <input id="auth_password_confirm" type="password" placeholder="Confirm Password" class="auth_input">
+            <button id="goToGenderSelect" class="button_fill_amber hoverable">Next Step</button>
+        </div>
+        <div id="auth_register_2">
+            <h1 id="auth_title">I am an...</h1>
+            <div id="gender_button_wrapper">
+                <button class="gender_select_button hoverable" id="select_male_gender">
+                    <svg viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M48.4375 0H38.151C36.7578 0 36.0677 1.67969 37.0443 2.66927L39.2448 4.86979L28.737 15.3776C25.8464 13.5547 22.4219 12.5 18.75 12.5C8.39844 12.5 0 20.8984 0 31.25C0 41.6016 8.39844 50 18.75 50C29.1016 50 37.5 41.6016 37.5 31.25C37.5 27.5781 36.4453 24.1536 34.6224 21.263L45.1302 10.7552L47.3307 12.9557C48.3203 13.9453 50 13.2422 50 11.849V1.5625C50 0.703125 49.2969 0 48.4375 0V0ZM18.75 41.6667C13.0078 41.6667 8.33333 36.9922 8.33333 31.25C8.33333 25.5078 13.0078 20.8333 18.75 20.8333C24.4922 20.8333 29.1667 25.5078 29.1667 31.25C29.1667 36.9922 24.4922 41.6667 18.75 41.6667Z"/>
+                    </svg>
+                    <p>Adventurer</p>
+                </button>
+                <button class="gender_select_button hoverable" id="select_female_gender">
+                    <svg viewBox="0 0 33 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.4074 16.0714C32.4074 7.19866 25.1495 0 16.2037 0C7.25791 0 0 7.19866 0 16.0714C0 23.7165 5.38998 30.1228 12.6029 31.7411V37.5H8.55196C7.80929 37.5 7.20165 38.1027 7.20165 38.8393V43.3036C7.20165 44.0402 7.80929 44.6429 8.55196 44.6429H12.6029V48.6607C12.6029 49.3973 13.2105 50 13.9532 50H18.4542C19.1969 50 19.8045 49.3973 19.8045 48.6607V44.6429H23.8555C24.5981 44.6429 25.2058 44.0402 25.2058 43.3036V38.8393C25.2058 38.1027 24.5981 37.5 23.8555 37.5H19.8045V31.7411C27.0174 30.1228 32.4074 23.7165 32.4074 16.0714V16.0714ZM7.20165 16.0714C7.20165 11.1496 11.2413 7.14286 16.2037 7.14286C21.1661 7.14286 25.2058 11.1496 25.2058 16.0714C25.2058 20.9933 21.1661 25 16.2037 25C11.2413 25 7.20165 20.9933 7.20165 16.0714Z"/>
+                    </svg>
+                    <p>Adventuress</p>
+                </button>
+            </div>
+            <button id="goToAgeSelect" class="button_fill_amber hoverable">Next Step</button>
+        </div>
+        <div id="auth_register_3">
+            <h1 id="auth_title">I was born on...</h1>
+            <div id="date_select_wrapper">
+                <div id="date_day_select" class="date_selector">
+                    <div id="date_day_box" class="date_selector_box hoverable">
+                    </div>
+                    <div id="date_day_select_list" class="date_selector_list">
+                    </div>
+                </div>
+                <div id="date_month_select" class="date_selector">
+                    <div id="date_month_box" class="date_selector_box hoverable">
+                    </div>
+                    <div id="date_month_select_list" class="date_selector_list">
+                    </div>
+                </div>
+                <div id="date_year_select" class="date_selector">
+                    <div id="date_year_box" class="date_selector_box hoverable">
+                    </div>
+                    <div id="date_year_select_list" class="date_selector_list">
+                    </div>
+                </div>
+            </div>
+            <button id="registerSubmit" class="button_fill_amber hoverable">Create your account</button>
+        </div>
+        <p id="auth_button_divider">or</p>
+        <button id="goToLogin" class="button_empty_amber hoverable">Sign In</button>
+    </div>
+  </div>
+
+    <div id="alert_wrapper">
+    </div>
+
+
+
+  <script src="register.js"></script>
+  
+</body>
+</html>

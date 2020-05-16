@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Heyquest</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div id="body_wrapper">
+    <img src="assets/auth_logo_main.png" id="auth_logo_main">
+    <div id="form_wrapper">
+        <h1 id="auth_title">Welcome back, adventurer</h1>
+        <p id="auth_subtitle">Ready for another quest?</p>
+        <input id="auth_email" type="text" placeholder="Email" class="auth_input">
+        <input id="auth_password" type="password" placeholder="Password" class="auth_input">
+        <button id="loginSubmit" class="button_fill_amber hoverable">Sign In</button>
+        <p id="auth_button_divider">or</p>
+        <button id="goToRegister" class="button_empty_amber hoverable">Create an Account</button>
+    </div>
+  </div>
+
+  <div id="alert_wrapper">  
+  </div>
+  
+  <script src="login.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Heyquest</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+  <div id="body_wrapper">
+    <img src="assets/auth_logo_main.png" id="auth_logo_main">
+    <div id="form_wrapper">
+        <img src="assets/peng_mail.png" id="mail_pingu_img">
+        <h1 id="mail_title">We've sent you an email</h1>
+        <p id="mail_subtitle">Verify your account and start your journey</p>
+        <button id="goToLogin" class="button_fill_amber hoverable">Sign In</button>
+    </div>
+  </div>
+
+  <div id="alert_wrapper">
+  </div>
+  
+  <script src="registermail.js"></script>
+  
+</body>
+</html>
