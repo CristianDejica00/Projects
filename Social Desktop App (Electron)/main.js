@@ -2,7 +2,7 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
-console.log("Console message from main.js");
+
 
 function createWindow () {
   // Create the browser window.
@@ -10,14 +10,15 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      preload: path.join(__dirname, 'preload.js'),
+      nodeIntegration: true
     }
   })
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
   mainWindow.setMinimumSize(800, 600)
-  mainWindow.removeMenu()
+  /*mainWindow.removeMenu()*/
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

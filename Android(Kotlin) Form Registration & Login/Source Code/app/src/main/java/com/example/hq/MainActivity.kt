@@ -24,6 +24,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        val intent = Intent(this, QRScanner::class.java)
+        startActivity(intent)
+
+/*
 
         var clickTextBlock = findViewById(R.id.textView) as TextView
         val text = "By continuing you agree to the Terms of Use and Privacy Policy"
@@ -60,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener {
             val intent = Intent(this, RegisterMain::class.java)
             startActivity(intent)
-        }
+        }*/
 
     }
 }

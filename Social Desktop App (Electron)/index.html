@@ -18,13 +18,10 @@
           <a href="index.html" class="hoverable">Home</a>
         </div>
         <div class="navbar_item">
-          <a href="#" class="hoverable">Discover</a>
+          <a href="requests.html" class="hoverable">Requests</a>
         </div>
         <div class="navbar_item">
-          <a href="#" class="hoverable">Requests</a>
-        </div>
-        <div class="navbar_item">
-          <a href="#" class="hoverable">Messages</a>
+          <a href="messages.html" class="hoverable">Messages</a>
         </div>
         <div class="navbar_item">
           <div id="navbar_avatar_circle" class="hoverable"></div>
@@ -41,13 +38,50 @@
       <div id="quest_creator" class="feed_block">
         <div id="quest_creator_avatar" class="hoverable"></div>
         <input type="text" id="quest_creator_input" placeholder="What's on your mind?">
-        <button id="quest_creator_submit"></button>
+        <button id="quest_creator_submit" class="hoverable"><img src="assets/send_icon.png"></button>
       </div>
+
+      <div class="feed_block">
+        <div class="post_header">
+          <div class="post_avatar hoverable"></div>
+          <div class="post_details">
+            <span class="hoverable">Cristi, 15</span>
+          </div>
+          <div class="post_menu_toggle_wrapper">
+            <button class="post_menu_toggle"></button>
+            <div class="post_menu_options">
+              
+            </div>
+          </div>
+        </div>
+        <div class="post_content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quis illo veniam atque? Quo consectetur nesciunt dolor, accusamus dolorum velit doloribus magnam excepturi? Maxime dolores soluta nobis totam sed nostrum?
+        </div>
+        <div class="post_footer">
+          <button class="post_like hoverable">
+            <svg viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M503.691 189.836L327.687 37.8509C312.281 24.5459 288 35.3469 288 56.0149V136.068C127.371 137.907 0 170.1 0 322.326C0 383.767 39.581 444.635 83.333 476.458C96.986 486.389 116.444 473.925 111.41 457.827C66.066 312.814 132.917 274.316 288 272.085V360C288 380.7 312.3 391.453 327.687 378.164L503.691 226.164C514.762 216.602 514.777 199.411 503.691 189.836V189.836Z" fill="white"/>
+            </svg>
+            <span>Join quest</span>
+          </button>
+          <div class="post_footer_users">
+            <div class="post_footer_user_circle hoverable"></div>
+            <div class="post_footer_user_circle hoverable"></div>
+            <div class="post_footer_user_circle hoverable"></div>
+            <div class="post_footer_user_circle hoverable"></div>
+            <div class="post_footer_user_circle hoverable"></div>
+            <div class="post_footer_user_circle plus_user_circle hoverable">
+              100+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <div id="feed_details_wrapper">
       <div id="feed_details">
-        <img src="assets/avatar_example.jpg" id="feed_details_avatar">
+        <img src="assets/avatar_example.jpg" id="feed_details_avatar" class="hoverable">
         <p id="feed_details_person"><span>Cristi</span>, <span>20</span></p>
         <p id="feed_details_location">Timisoara, RO</p>
         <hr>

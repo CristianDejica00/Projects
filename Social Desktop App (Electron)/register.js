@@ -1,9 +1,20 @@
+var selectedName = "";
+var selectedEmail = "";
+var selectedPassword = "";
 var selectedGender = "";
+
+var lat = "";
+var long = "";
+
+var https = require('https');
+
+
 
 
 document.getElementById('goToLogin').onclick = function() {
     window.location.href = "login.html";
 }
+
 
 
 function createAlert(x) {
@@ -27,9 +38,9 @@ document.getElementById('goToGenderSelect').onclick = function() {
     } else if(document.getElementById('auth_password').value != document.getElementById('auth_password_confirm').value) {
         createAlert('Your passwords must match');
     } else {
-        var selectedName = document.getElementById('auth_name').value;
-        var selectedEmail = document.getElementById('auth_email').value;
-        var selectedPassword = document.getElementById('auth_password').value;
+        selectedName = document.getElementById('auth_name').value;
+        selectedEmail = document.getElementById('auth_email').value;
+        selectedPassword = document.getElementById('auth_password').value;
         document.getElementById('auth_register_1').style.display = "none";
         document.getElementById('auth_register_2').style.display = "block";
     }
@@ -178,6 +189,14 @@ for (var i = 0; i < document.getElementsByClassName('year_selector_item').length
         document.getElementById('date_year_select_list').style.display = 'none';
     }, false);
 }
+/*
+function calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+}*/
+
 
 
 
@@ -185,7 +204,31 @@ document.getElementById('registerSubmit').onclick = function(){
     if(selectedDay == 'dd' || selectedMonth == 'mm' || selectedYear == 'yyyy') {
         createAlert('You must select a birth date');
     } else {
-        window.location.href = "registermail.html";
+        
+        var dateThen = selectedDay+"-"+selectedMonth+"-"+selectedYear;
+
+
+        var op_sys="Unknown OS";
+        if (navigator.appVersion.indexOf("Win")!=-1) op_sys="Windows";
+        if (navigator.appVersion.indexOf("Mac")!=-1) op_sys="MacOS";
+        if (navigator.appVersion.indexOf("X11")!=-1) op_sys="UNIX";
+        if (navigator.appVersion.indexOf("Linux")!=-1) op_sys="Linux";
+
+        var location = ""
+        /*if(navigator.geolocation) {
+            navigator.geolocation.watchPosition(showPosition);
+        }
+
+        function showPosition(position) {
+            location = position.coords.latitude + "-" + position.coords.longitude
+        }*/
+
+
+        var sql = "INSERT INTO `users` (`name`, `email`, `password`, `gender`, `dob`, `platform`, `operating_system`, `location`) VALUES ('"+selectedName+"', '"+selectedEmail+"', '"+selectedPassword+"', '"+selectedGender+"', '"+dateThen+"', 'Heyquest Desktop', '"+op_sys+"', '"+location+"')";
+        con.query(sql, function (err, result) {
+            if (err) throw err;
+            window.location.href = "registermail.html";
+        });
     }
 }
 
