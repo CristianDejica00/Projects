@@ -18,7 +18,8 @@ class QRScanner : AppCompatActivity() {
         val scanner = IntentIntegrator(this)
         scanner.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
         scanner.setBeepEnabled(false)
-
+        scanner.setPrompt("")
+        scanner.setOrientationLocked(false)
         scanner.initiateScan()
     }
 
@@ -29,8 +30,7 @@ class QRScanner : AppCompatActivity() {
                 if (result.contents == null) {
                     Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
                 } else {
-                    Toast.makeText(this, "Scanned: " + result.contents, Toast.LENGTH_LONG)
-                        .show()
+                    Toast.makeText(this, "Scanned: " + result.contents, Toast.LENGTH_LONG).show()
                 }
             } else {
                 super.onActivityResult(requestCode, resultCode, data)

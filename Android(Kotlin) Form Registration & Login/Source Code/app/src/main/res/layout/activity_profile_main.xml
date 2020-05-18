@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileMain">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button33"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/home_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintEnd_toStartOf="@+id/button34"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar5"
+        app:layout_constraintTop_toTopOf="@+id/toolbar5" />
+
+    <Button
+        android:id="@+id/button34"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/requests_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintEnd_toStartOf="@+id/button35"
+        app:layout_constraintTop_toTopOf="@+id/toolbar5" />
+
+    <Button
+        android:id="@+id/button35"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/settings_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintEnd_toStartOf="@+id/button36"
+        app:layout_constraintTop_toTopOf="@+id/toolbar5" />
+
+    <Button
+        android:id="@+id/button36"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/user_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar5" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_example" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="55dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/button37"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/profile_edit_button"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Edit bio"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/button39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/profile_edit_button"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="Change Photo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="390dp"
+                android:background="@drawable/profile_hovering_block"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cristi, 20"
+                        android:textColor="#000000"
+                        android:textSize="20dp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Lvl. 15"
+                        android:textColor="#FF8A00"
+                        android:textSize="16dp"></TextView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Timisoara, RO"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="LLorem ipsum dolor sit amet, consectetur adipisicing elit. Officia iusto quaerat illum? Explicabo deleniti ipsum aliquid dignissimos odio mollitia reprehenderit aliquam autem earum, harum, ex nemo odit illo aut vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia iusto quaerat illum? Explicabo deleniti ipsum aliquid dignissimos odio mollitia reprehenderit aliquam autem earum, harum, ex nemo odit illo aut vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia iusto quaerat illum? Explicabo deleniti ipsum aliquid dignissimos odio mollitia reprehenderit aliquam autem earum, harum, ex nemo odit illo aut vel.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia iusto quaerat illum? Explicabo deleniti ipsum aliquid dignissimos odio mollitia reprehenderit aliquam autem earum, harum, ex nemo odit illo aut vel.orem ipsum dolor sit amet, consectetur adipisicing elit. Officia iusto quaerat illum? Explicabo deleniti ipsum aliquid dignissimos odio mollitia reprehenderit aliquam autem earum, harum, ex nemo odit illo aut vel."
+                    android:textSize="16dp"
+                    app:lineHeight="24dp"></TextView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000"
+                    android:text="Active quest"
+                    android:textSize="18dp"/>
+
+                <include
+                    layout="@layout/quest_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </include>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--android:background="#FAFAFA"-->

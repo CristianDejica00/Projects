@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.hq" >
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.hq">
 
     <application
         android:allowBackup="true"
@@ -8,16 +9,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar" >
-        <activity android:name=".QRScanner"
-             >
-        </activity>
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5409719730818391~4414203481"/>
+
+        <activity android:name=".SettingsMain"></activity>
+        <activity android:name=".ProfileMain" />
+        <activity android:name=".QuestReacts" />
+        <activity android:name=".CreateQuest" />
+        <activity android:name=".MainFeed" />
+        <activity xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:name=".QRScanner"
+            android:screenOrientation="fullSensor"
+            tools:ignore="MissingConstraints"
+            tools:replace="screenOrientation" />
         <activity android:name=".RegisterMail" />
         <activity android:name=".RegisterAge" />
         <activity android:name=".RegisterGender" />
         <activity android:name=".RegisterMain" />
         <activity android:name=".Login_Main" />
-        <activity android:name=".MainActivity" >
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

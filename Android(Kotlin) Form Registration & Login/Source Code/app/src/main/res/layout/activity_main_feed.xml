@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-1dp"
+        android:background="@color/design_default_color_on_primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="108dp"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:srcCompat="@drawable/logo_main_color" />
+
+    <Button
+        android:id="@+id/button15"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/home_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toStartOf="@+id/button16"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/toolbar2"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="40dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_height="40dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/requests_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/settings_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button18"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="40dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_height="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/user_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar2" />
+
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="15dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/qr_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="15dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/messages_toolbar_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <ListView
+        android:id="@+id/mainfeedwrapper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
