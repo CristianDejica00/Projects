@@ -4,7 +4,9 @@
     android:id="@+id/post_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="10dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp"
+    android:paddingRight="15dp"
     android:paddingBottom="20dp"
     tools:context=".MainFeed">
 

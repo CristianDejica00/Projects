@@ -22,6 +22,7 @@
     "electron-packager": "^14.2.1"
   },
   "dependencies": {
+    "electron-open-link-in-browser": "^1.0.2",
     "geolocation": "^0.2.0",
     "mysql": "^2.18.1"
   }

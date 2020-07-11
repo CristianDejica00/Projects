@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <title>Heyquest</title>
+  <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+
+  <div id="navbar_wrapper">
+    <div id="navbar">
+      <img src="assets/app_icon.png" id="navbar_logo">
+      <div id="navbar_menu">
+        <div class="navbar_item">
+          <a href="index.html" class="hoverable">Home</a>
+        </div>
+        <div class="navbar_item">
+          <a href="requests.html" class="hoverable">Requests</a>
+        </div>
+        <div class="navbar_item active">
+          <a href="messages.html" class="hoverable">Messages</a>
+        </div>
+        <div class="navbar_item">
+          <a href="profile.html" class="hoverable"><div id="navbar_avatar_circle" class="hoverable"></div></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="message_content_wrapper">
+
+    <div id="conversation_list_wrapper">
+        <div id="conversation_list_header">
+            <input type="text" id="conversation_list_filter_input" placeholder="Search...">
+        </div>
+        <div id="conversation_list_scrollable_content">
+            <a href="#"><div class="conversation_item">
+                <div class="conversation_item_avatar"></div>
+                <div class="conversation_item_details">
+                    <div class="conversation_item_title">Cristian, 20</div>
+                    <div class="conversation_item_sample">Cristiaas sdasdg asdgsadg asgdasdsad gasdga sdgsadg</div>
+                </div>
+            </div></a>
+        </div>
+    </div>
+
+    <div id="conversation_main_wrapper">
+        <div id="conversation_header">
+            <div id="conversation_header_content">
+                <a href="#"><div id="conversation_header_avatar"></div></a>
+                <a href="#"><div id="conversation_header_title">Cristian, 20</div></a>
+            </div>
+            <button id="conversation_header_settings">
+                <svg viewBox="0 0 190 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="25" fill="#A9A9A9"/>
+                    <circle cx="95" cy="25" r="25" fill="#A9A9A9"/>
+                    <circle cx="165" cy="25" r="25" fill="#A9A9A9"/>
+                </svg>
+            </button>
+        </div>
+        <div id="conversation_body">
+            <div class="message_wrapper message_left">
+                <div class="message_avatar"></div>
+                <div class="message_content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed illo similique repudiandae obcaecati ex quos repellendus itaque odit quibusdam laudantium, exercitationem sequi asperiores saepe veritatis quidem nisi vero eos possimus!
+                </div>
+                <div class="message_time">15:35</div>
+            </div>
+            <div class="message_wrapper message_right">
+                <div class="message_avatar"></div>
+                <div class="message_content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicin
+                </div>
+                <div class="message_time">15:35</div>
+            </div>
+            <div class="message_wrapper message_left">
+                <div class="message_avatar"></div>
+                <div class="message_content">
+                    Lorem ipsum dolor
+                </div>
+                <div class="message_time">15:35</div>
+            </div>
+            <div class="message_wrapper message_right">
+                <div class="message_avatar"></div>
+                <div class="message_content">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed illo sim
+                </div>
+                <div class="message_time">15:35</div>
+            </div>
+        </div>
+        <div id="conversation_footer">
+            <input type="text" id="conversation_footer_input" placeholder="Type a message">
+            <button id="conversation_footer_button"><img src="assets/send_icon.png"></button>
+        </div>
+    </div>
+
+  </div>
+  
+  <script src="messages.js"></script>
+
+</body>
+</html>

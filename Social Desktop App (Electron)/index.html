@@ -7,6 +7,11 @@
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
   <title>Heyquest</title>
   <link rel="stylesheet" href="css/master.css">
+  <script>
+    document.getElementById("feed_link_1").onclick = function() {
+      console.log("asd");
+    }
+  </script>
 </head>
 <body>
 
@@ -24,8 +29,7 @@
           <a href="messages.html" class="hoverable">Messages</a>
         </div>
         <div class="navbar_item">
-          <div id="navbar_avatar_circle" class="hoverable"></div>
-          <div id="profile_options"></div>
+          <a href="profile.html" class="hoverable"><div id="navbar_avatar_circle" class="hoverable"></div></a>
         </div>
       </div>
     </div>
@@ -92,18 +96,41 @@
         </div>
       </div>
       <div id="feed_details_links">
-        <a href="#" class="hoverable">Rules</a>
-        <a href="#" class="hoverable">Safety</a>
-        <a href="#" class="hoverable">FAQ</a>
-        <a href="#" class="hoverable">Terms</a>
-        <a href="#" class="hoverable">Privacy</a>
-        <a href="#" class="hoverable">Contact</a>
-        <a href="#" class="hoverable">Feedback</a>
+        <a id="feed_link_1" class="hoverable">Rules</a>
+        <a id="feed_link_2" class="hoverable">Safety</a>
+        <a id="feed_link_3" class="hoverable">FAQ</a>
+        <a id="feed_link_4" class="hoverable">Terms</a>
+        <a id="feed_link_5" class="hoverable">Privacy</a>
+        <a id="feed_link_6" class="hoverable">Contact</a>
+        <a id="feed_link_7" class="hoverable">Feedback</a>
       </div>
       <p id="feed_details_copyright">&copy; Heyquest 2020</p>
     </div>
 
   </div>
+
+
+
+
+  <div class="modal_shadow">
+    <div class="modal_window">
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   <script src="home.js"></script>
 

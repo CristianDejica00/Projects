@@ -3,6 +3,9 @@ package com.example.hq
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.net.Uri
 import android.os.Bundle
 import android.text.SpannableStringBuilder
@@ -13,21 +16,24 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationCallback
+import com.google.android.gms.location.LocationRequest
+import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
 
-    @SuppressLint("WrongViewCast")
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        val intent = Intent(this, MainFeed::class.java)
-        startActivity(intent)
 
-/*
 
         var clickTextBlock = findViewById(R.id.textView) as TextView
         val text = "By continuing you agree to the Terms of Use and Privacy Policy"
@@ -64,7 +70,9 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener {
             val intent = Intent(this, RegisterMain::class.java)
             startActivity(intent)
-        }*/
+        }
 
     }
+
+
 }

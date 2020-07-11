@@ -36,6 +36,27 @@ window.onclick = function(evt) {
             }
         }
         evt.target.parentElement.getElementsByClassName('post_menu_options').style.display = 'block';
+    } else if(evt.target.id == "feed_link_1") {
+        const { shell } = require('electron');
+        shell.openExternal('LINK_1_GOES_HERE');
+    } else if(evt.target.id == "feed_link_2") {
+        const { shell } = require('electron');
+        shell.openExternal('LINK_2_GOES_HERE');
+    } else if(evt.target.id == "feed_link_3") {
+        const { shell } = require('electron');
+        shell.openExternal('LINK_3_GOES_HERE');
+    } else if(evt.target.id == "feed_link_4") {
+        const { shell } = require('electron');
+        shell.openExternal('LINK_4_GOES_HERE');
+    } else if(evt.target.id == "feed_link_5") {
+        const { shell } = require('electron');
+        shell.openExternal('LINK_5_GOES_HERE');
+    } else if(evt.target.id == "feed_link_6") {
+        const { shell } = require('electron');
+        shell.openExternal('LINK_6_GOES_HERE');
+    } else if(evt.target.id == "feed_link_7") {
+        const { shell } = require('electron');
+        shell.openExternal('LINK_7_GOES_HERE');
     } else {
         for(i=0;i<document.getElementsByClassName('post_menu_options').length;i++) {
             document.getElementsByClassName('post_menu_options')[i].style.display = 'none';

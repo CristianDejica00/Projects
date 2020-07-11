@@ -7,7 +7,10 @@ import android.view.Gravity
 import android.view.Window
 import android.view.WindowManager
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_login__main.*
 
 class Login_Main : AppCompatActivity() {
@@ -54,10 +57,18 @@ class Login_Main : AppCompatActivity() {
                 alertDialog.setMessage("Your password must be at least 8 characters long")
                 alertDialog.show()
             } else {
-                val first_value = first_input.text
-                val second_value = second_input.text
-                alertDialog.setMessage(first_value.toString() + '\n' + second_value.toString())
-                alertDialog.show()
+                val first_value = first_input.text as String
+                val second_value = second_input.text as String
+                FirebaseAuth.getInstance().signInWithEmailAndPassword(first_value, second_value)
+                .addOnCompleteListener {
+                    if(!it.isSuccessful) return@addOnCompleteListener
+
+                    val intent = Intent(this, MainFeed::class.java)
+                    startActivity(intent)
+                }
+                .addOnFailureListener {
+                    Toast.makeText(this, "Wrong email and password", Toast.LENGTH_LONG).show()
+                }
             }
         }
     }

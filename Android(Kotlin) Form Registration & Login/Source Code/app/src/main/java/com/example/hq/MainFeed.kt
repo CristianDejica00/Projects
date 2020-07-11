@@ -11,8 +11,10 @@ import android.widget.ListView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.marginLeft
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
+import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.formats.NativeAdOptions
 import com.google.android.gms.ads.formats.UnifiedNativeAd
@@ -27,9 +29,7 @@ class MainFeed : AppCompatActivity() {
 
 
 
-        MobileAds.initialize(this) {}
-
-
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713")
 
 
 
@@ -100,6 +100,8 @@ class MainFeed : AppCompatActivity() {
 
             val postName = postBlock.findViewById<TextView>(R.id.post_header_name)
             postName.text = list.get(position)
+
+
 
             return postBlock
 
